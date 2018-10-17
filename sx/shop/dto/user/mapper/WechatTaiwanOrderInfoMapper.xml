@@ -1,0 +1,295 @@
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.shaoxi.scanorder.repository.WechatTaiwanOrderInfoMapper">
+<resultMap id="WechatTaiwanOrderInfoEntityMap" type="com.shaoxi.scanorder.entity.WechatTaiwanOrderInfoEntity">
+	<result column="id" property="id" jdbcType="BIGINT" />
+	<result column="order_id" property="orderId" jdbcType="VARCHAR" />
+	<result column="currency" property="currency" jdbcType="VARCHAR" />
+	<result column="amount" property="amount" jdbcType="BIGINT" />
+	<result column="order_status" property="orderStatus" jdbcType="VARCHAR" />
+	<result column="consume_succ" property="consumeSucc" jdbcType="TINYINT" />
+	<result column="mchntid" property="mchntid" jdbcType="VARCHAR" />
+	<result column="appid" property="appid" jdbcType="VARCHAR" />
+	<result column="inscd" property="inscd" jdbcType="VARCHAR" />
+	<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	<result column="create_person" property="createPerson" jdbcType="VARCHAR" />
+	<result column="pay_success_time" property="paySuccessTime" jdbcType="TIMESTAMP" />
+	<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	<result column="merchant_account" property="merchantAccount" jdbcType="VARCHAR" />
+	<result column="version" property="version" jdbcType="BIGINT" />
+</resultMap>
+<sql id="BaseColumn">
+id,
+order_id,
+currency,
+amount,
+order_status,
+consume_succ,
+mchntid,
+appid,
+inscd,
+create_time,
+create_person,
+pay_success_time,
+update_time,
+merchant_account,
+version
+		</sql>
+
+
+
+		<!-- 插入 -->
+<insert id="save" parameterType="com.shaoxi.scanorder.entity.WechatTaiwanOrderInfoEntity" useGeneratedKeys="true"
+		keyProperty="id">
+INSERT INTO wechat_taiwan_order_info
+<trim prefix="(" suffix=")" suffixOverrides=",">
+	<if test="id != null">
+		id,
+</if>
+	<if test="orderId != null">
+		order_id,
+</if>
+	<if test="currency != null">
+		currency,
+</if>
+	<if test="amount != null">
+		amount,
+</if>
+	<if test="orderStatus != null">
+		order_status,
+</if>
+	<if test="consumeSucc != null">
+		consume_succ,
+</if>
+	<if test="mchntid != null">
+		mchntid,
+</if>
+	<if test="appid != null">
+		appid,
+</if>
+	<if test="inscd != null">
+		inscd,
+</if>
+	<if test="createTime != null">
+		create_time,
+</if>
+	<if test="createPerson != null">
+		create_person,
+</if>
+	<if test="paySuccessTime != null">
+		pay_success_time,
+</if>
+	<if test="updateTime != null">
+		update_time,
+</if>
+	<if test="merchantAccount != null">
+		merchant_account,
+</if>
+	<if test="version != null">
+		version
+</if>
+		</trim>
+<trim prefix="values (" suffix=")" suffixOverrides=",">
+<if test="id != null">
+	#{id,jdbcType=BIGINT},
+</if>
+<if test="orderId != null">
+	#{orderId,jdbcType=VARCHAR},
+</if>
+<if test="currency != null">
+	#{currency,jdbcType=VARCHAR},
+</if>
+<if test="amount != null">
+	#{amount,jdbcType=BIGINT},
+</if>
+<if test="orderStatus != null">
+	#{orderStatus,jdbcType=VARCHAR},
+</if>
+<if test="consumeSucc != null">
+	#{consumeSucc,jdbcType=TINYINT},
+</if>
+<if test="mchntid != null">
+	#{mchntid,jdbcType=VARCHAR},
+</if>
+<if test="appid != null">
+	#{appid,jdbcType=VARCHAR},
+</if>
+<if test="inscd != null">
+	#{inscd,jdbcType=VARCHAR},
+</if>
+<if test="createTime != null">
+	#{createTime,jdbcType=TIMESTAMP},
+</if>
+<if test="createPerson != null">
+	#{createPerson,jdbcType=VARCHAR},
+</if>
+<if test="paySuccessTime != null">
+	#{paySuccessTime,jdbcType=TIMESTAMP},
+</if>
+<if test="updateTime != null">
+	#{updateTime,jdbcType=TIMESTAMP},
+</if>
+<if test="merchantAccount != null">
+	#{merchantAccount,jdbcType=VARCHAR},
+</if>
+<if test="version != null">
+	#{version,jdbcType=BIGINT}
+</if>
+		</trim>
+		</insert>
+
+		<!-- 修改 -->
+<update id="update" parameterType="com.shaoxi.scanorder.entity.WechatTaiwanOrderInfoEntity">
+UPDATE wechat_taiwan_order_info
+<set>
+	<if test="id != null">
+		id = #{id},
+</if>
+	<if test="orderId != null">
+		order_id = #{orderId},
+</if>
+	<if test="currency != null">
+		currency = #{currency},
+</if>
+	<if test="amount != null">
+		amount = #{amount},
+</if>
+	<if test="orderStatus != null">
+		order_status = #{orderStatus},
+</if>
+	<if test="consumeSucc != null">
+		consume_succ = #{consumeSucc},
+</if>
+	<if test="mchntid != null">
+		mchntid = #{mchntid},
+</if>
+	<if test="appid != null">
+		appid = #{appid},
+</if>
+	<if test="inscd != null">
+		inscd = #{inscd},
+</if>
+	<if test="createTime != null">
+		create_time = #{createTime},
+</if>
+	<if test="createPerson != null">
+		create_person = #{createPerson},
+</if>
+	<if test="paySuccessTime != null">
+		pay_success_time = #{paySuccessTime},
+</if>
+	<if test="updateTime != null">
+		update_time = #{updateTime},
+</if>
+	<if test="merchantAccount != null">
+		merchant_account = #{merchantAccount},
+</if>
+	<if test="version != null">
+		version = #{version}
+</if>
+		</set>
+<where>
+<if test="id!=null and id!=''">
+	and id = #{id}
+</if>
+<if test="orderId!=null and orderId!=''">
+	and order_id = #{orderId}
+</if>
+<if test="currency!=null and currency!=''">
+	and currency = #{currency}
+</if>
+<if test="amount!=null and amount!=''">
+	and amount = #{amount}
+</if>
+<if test="orderStatus!=null and orderStatus!=''">
+	and order_status = #{orderStatus}
+</if>
+<if test="consumeSucc!=null and consumeSucc!=''">
+	and consume_succ = #{consumeSucc}
+</if>
+<if test="mchntid!=null and mchntid!=''">
+	and mchntid = #{mchntid}
+</if>
+<if test="appid!=null and appid!=''">
+	and appid = #{appid}
+</if>
+<if test="inscd!=null and inscd!=''">
+	and inscd = #{inscd}
+</if>
+<if test="createTime!=null and createTime!=''">
+	and create_time = #{createTime}
+</if>
+<if test="createPerson!=null and createPerson!=''">
+	and create_person = #{createPerson}
+</if>
+<if test="paySuccessTime!=null and paySuccessTime!=''">
+	and pay_success_time = #{paySuccessTime}
+</if>
+<if test="updateTime!=null and updateTime!=''">
+	and update_time = #{updateTime}
+</if>
+<if test="merchantAccount!=null and merchantAccount!=''">
+	and merchant_account = #{merchantAccount}
+</if>
+<if test="version!=null and version!=''">
+	and version = #{version}
+</if>
+		</where>
+		</update>
+
+		<!-- 查询 -->
+<select id="query" parameterType="com.shaoxi.scanorder.entity.WechatTaiwanOrderInfoEntity" resultMap="WechatTaiwanOrderInfoEntityMap">
+SELECT
+<include refid="BaseColumn" />
+FROM wechat_taiwan_order_info
+<where>
+	<if test="id!=null and id!=''">
+		and id = #{id}
+	</if>
+	<if test="orderId!=null and orderId!=''">
+		and order_id = #{orderId}
+	</if>
+	<if test="currency!=null and currency!=''">
+		and currency = #{currency}
+	</if>
+	<if test="amount!=null and amount!=''">
+		and amount = #{amount}
+	</if>
+	<if test="orderStatus!=null and orderStatus!=''">
+		and order_status = #{orderStatus}
+	</if>
+	<if test="consumeSucc!=null and consumeSucc!=''">
+		and consume_succ = #{consumeSucc}
+	</if>
+	<if test="mchntid!=null and mchntid!=''">
+		and mchntid = #{mchntid}
+	</if>
+	<if test="appid!=null and appid!=''">
+		and appid = #{appid}
+	</if>
+	<if test="inscd!=null and inscd!=''">
+		and inscd = #{inscd}
+	</if>
+	<if test="createTime!=null and createTime!=''">
+		and create_time = #{createTime}
+	</if>
+	<if test="createPerson!=null and createPerson!=''">
+		and create_person = #{createPerson}
+	</if>
+	<if test="paySuccessTime!=null and paySuccessTime!=''">
+		and pay_success_time = #{paySuccessTime}
+	</if>
+	<if test="updateTime!=null and updateTime!=''">
+		and update_time = #{updateTime}
+	</if>
+	<if test="merchantAccount!=null and merchantAccount!=''">
+		and merchant_account = #{merchantAccount}
+	</if>
+	<if test="version!=null and version!=''">
+		and version = #{version}
+	</if>
+</where>
+		</select>
+
+		</mapper>
