@@ -33,12 +33,7 @@
 	<entry key="java_typemapping.java.math.BigDecimal">java.lang.Double</entry>
 	<entry key="java_typemapping.java.sql.Clob">java.lang.String</entry>
 
-	<!-- Mysql -->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/payment?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">sx_payment</entry>
-	<entry key="jdbc.password">uwej2%Ky)QPL;12r</entry>-->
-
+	
 
 
 	<!-- Oracle		jdbc:oracle:oci:@tnsname_devdb
