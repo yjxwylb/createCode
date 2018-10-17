@@ -33,57 +33,7 @@
 	<entry key="java_typemapping.java.math.BigDecimal">java.lang.Double</entry>
 	<entry key="java_typemapping.java.sql.Clob">java.lang.String</entry>
 
-	<!-- Mysql -->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/payment?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">sx_payment</entry>
-	<entry key="jdbc.password">uwej2%Ky)QPL;12r</entry>-->
-
-	<!--测试==国际扫码用户库-->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/abroad_sx_core_db?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">global_core</entry>
-	<entry key="jdbc.password">a0g%VL,7jE5CFrIX</entry>-->
-
-	<!--测试==国际扫码业务库-->
-<!--	<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/abroad_chair_scancode?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">global_scancode</entry>
-	<entry key="jdbc.password">fR1Xsc#25JGHz9Xr</entry>-->
-
-
-	<!--测试==支付业务库-->
-	<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/payment?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">sx_payment</entry>
-	<entry key="jdbc.password">uwej2%Ky)QPL;12r</entry>
-
-	<!--正式==支付业务库-->
-	<!--<entry key="jdbc.url">jdbc:mysql://rm-t4n4j9136l89ldhn7vo.mysql.singapore.rds.aliyuncs.com:3306/payment?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">sg_payment_ad</entry>
-	<entry key="jdbc.password">KxaEB!4w(So4#)-b</entry>-->
-
-
-	<!--微信商城业务测试库:-->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/zyc_test?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">zhouyc</entry>
-	<entry key="jdbc.password">zhouyc123qwe</entry>-->
-	<!--微信商城用户测试库-->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/sx_core_db?useUnicode=true&amp;characterEncoding=UTF-8</entry>
-	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.username">sxcore</entry>
-	<entry key="jdbc.password">testsxcore</entry>
--->
-<!--活动中心： 世界杯-->
-	<!--<entry key="jdbc.url">jdbc:mysql://121.43.177.106:3306/sx_activity?useUnicode=true&amp;characterEncoding=UTF-8</entry>-->
-	<!--<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>-->
-	<!--<entry key="jdbc.username">sx_activity</entry>-->
-	<!--<entry key="jdbc.password">0ZBB4f5HC[fg</entry>-->
-
-
-
+	
 
 	<!-- Oracle		jdbc:oracle:oci:@tnsname_devdb
 	<entry key="jdbc.url">jdbc:oracle:thin:@YOS-1027172421:1521:orcl</entry>
